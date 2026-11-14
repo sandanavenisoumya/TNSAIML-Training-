@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> House Price Predictor</h1>
+
+        <form action="/predict" method="POST">
+
+            <div class="input-group">
+                <input type="number" name="area" placeholder="Area (sqft)" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="bedrooms" placeholder="Bedrooms" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="bathrooms" placeholder="Bathrooms" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="parking" placeholder="Parking Spaces" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="house_age" placeholder="House Age" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" step="0.1" name="location_rating" placeholder="Location Rating (1-10)" required>
+            </div>
+
+            <div class="input-group">
+                <input type="number" step="0.1" name="distance_city" placeholder="Distance From City (km)" required>
+            </div>
+
+            <button type="submit">
+                Predict Price
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+<footer>
+    <p>
+        © 2026 House Price Predictor |
+
+    </p>
+</footer>
+
+</html>
